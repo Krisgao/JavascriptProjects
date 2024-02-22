@@ -1,0 +1,6 @@
+{
+
+"scripts": {
+    "start-desktop": "cd desktop && npm start"
+}
+}

@@ -1,0 +1,29 @@
+/* frontend/src/components/FileUpload.css */
+
+.file-upload-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.file-upload-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.file-upload-container input[type="file"] {
+    margin-right: 10px;
+}
+
+.file-upload-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.file-upload-container button:hover {
+    background-color: #0056b3;
+}

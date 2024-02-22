@@ -8,21 +8,17 @@ const App = () => {
     const [results, setResults] = useState([]);
 
     // 处理文件上传并获取比较结果
-    const handleFileUpload = async (data) => {
+    const handleFileUpload = async (csvData) => {
         try {
-            console.log(data);
-            const response = await fetch('http://localhost:5000/api/compare', {
+            const response = await fetch('/api/compare', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify({ csvData })
             });
-            if (!response.ok) {
-                throw new Error('Failed to fetch');
-            }
-            const responseData = await response.json();
-            setResults(responseData);
+            const data = await response.json();
+            setResults(data);
         } catch (error) {
             console.error('Error:', error);
         }
